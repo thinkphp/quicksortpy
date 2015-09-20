@@ -64,7 +64,7 @@ class Controller(webapp.RequestHandler):
           </div>
 </form><p class="info">Worst-case running time is O(N^2)</p><p class="info">Best-case running time is O(N Log N)</p><p class="info">Average-case running time is O(N Log N)</p>""")
 
-        out = [] 
+        input = [] 
 
         q = cgi.escape(self.request.get('search')) 
 
@@ -72,11 +72,11 @@ class Controller(webapp.RequestHandler):
 
         for val in q:
 
-            out.append( int( val ) )  
-
+            input.append( int( val ) )  
+ 
         start_time = time.clock()
         
-        ob = QuickSort( out )
+        ob = QuickSort( input )
 
         self.response.write('<div class="yui-u">') 
 
@@ -88,7 +88,7 @@ class Controller(webapp.RequestHandler):
 
         self.response.write('<br/><p style="color: #c1c1d1">')        
         self.response.write( 'Input -> ')     
-        self.response.write( out )
+        self.response.write( input )
         self.response.write('</p>')        
         self.response.write( ("Time execution: %s seconds " % (time.clock() - start_time)) )
         self.response.write('</p>')        

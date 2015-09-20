@@ -1,3 +1,11 @@
+#
+# Quick__Sort.py - Quick Sort - Algorithm Sorting an array of randomly permuted of values.
+# Website <http://adrianstatescu.ro>(MIT License).
+# Email   <mergesortv@gmail.com>.
+# Copyright (c) 2015, Adrian Statescu.
+# 
+ 
+
 class QuickSort:
 
   vec = [] 
